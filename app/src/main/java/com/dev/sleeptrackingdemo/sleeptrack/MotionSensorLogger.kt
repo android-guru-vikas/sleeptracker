@@ -58,6 +58,7 @@ class MotionSensorLogger : Service(), SensorEventListener {
     @SuppressLint("SimpleDateFormat")
     private inner class SensorEventLoggerTask : AsyncTask<SensorEvent, Void, Void>() {
         override fun doInBackground(vararg events: SensorEvent): Void? {
+
             val sensorEvent = events[0]
             val timestamp = System.currentTimeMillis()
             val sensorThreshold = 0.05f
